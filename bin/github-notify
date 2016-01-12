@@ -11,6 +11,7 @@ const Clp = require("clp")
     , deffy = require("deffy")
     , notifier = require("node-notifier")
     , moment = require("moment")
+    , diable = require("diable")
     ;
 
 // Constants
@@ -19,6 +20,7 @@ const CONFIG_PATH = abs("~/.github-config.json");
 // Parse the command line arguments
 var intervalOpt = new Clp.Option(["i", "interval"], "The delay between requests (milliseconds).", "ms", 8000)
   , tokenOpt = new Clp.Option(["t", "token"], "The GitHub token.", "token")
+  , daemonOpt = new Clp.Option(["d", "daemon"], "Daemonize the process.")
   , parser = new Clp({
         name: "GitHub Notify"
       , version: packageJson.version
@@ -29,8 +31,17 @@ var intervalOpt = new Clp.Option(["i", "interval"], "The delay between requests 
         ]
       , docs_url: packageJson.homapage
       , process: true
-    })
+    }, [
+        intervalOpt
+      , tokenOpt
+      , daemonOpt
+    ])
   ;
+
+// Daemonize
+if (!diable.isDaemon() && daemonOpt.is_provided) {
+    return diable();
+}
 
 readJson(CONFIG_PATH, (err, conf) => {
     if (err) {
@@ -44,7 +55,6 @@ readJson(CONFIG_PATH, (err, conf) => {
     }
 
     notify(tokenOpt.value, intervalOpt.value, (err, data) => {
-    debugger
         if (err) {
             return notifier.notify({
                 title: "Error!"

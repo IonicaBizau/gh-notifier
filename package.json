@@ -25,6 +25,7 @@
     "abs": "^1.2.0",
     "clp": "^3.2.0",
     "deffy": "^2.2.0",
+    "diable": "^2.3.0",
     "emoji-logger": "^1.0.0",
     "gh.js": "^2.4.0",
     "moment": "^2.11.1",
@@ -35,7 +36,7 @@
     "xml2js": "^0.4.15"
   },
   "blah": {
-      "h_img": "http://i.imgur.com/OqMXPq5.png",
-      "ex_img": "http://i.imgur.com/ViV1UST.png"
+    "h_img": "http://i.imgur.com/OqMXPq5.png",
+    "ex_img": "http://i.imgur.com/ViV1UST.png"
   }
 }
