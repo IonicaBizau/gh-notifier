@@ -28,8 +28,8 @@ Options:
   -v, --version        Displays version information.             
 
 Examples:
-  github-notify -t 9b0...ab1
-  github-notify -t 9b0...ab1 -i 10000 # every ten seconds
+  gh-notifier -t 9b0...ab1
+  gh-notifier -t 9b0...ab1 -i 10000 # every ten seconds
 
 ```
 

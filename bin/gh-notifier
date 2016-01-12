@@ -26,8 +26,8 @@ var intervalOpt = new Clp.Option(["i", "interval"], "The delay between requests 
       , version: packageJson.version
       , exe: packageJson.name
       , examples: [
-            "github-notify -t 9b0...ab1"
-          , "github-notify -t 9b0...ab1 -i 10000 # every ten seconds"
+            "gh-notifier -t 9b0...ab1"
+          , "gh-notifier -t 9b0...ab1 -i 10000 # every ten seconds"
         ]
       , docs_url: packageJson.homapage
       , process: true
