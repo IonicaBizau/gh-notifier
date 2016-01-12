@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+
+"use strict";
+
+const Clp = require("clp")
+    , packageJson = require("../package")
+    , abs = require("abs")
+    , log = require("emoji-logger")
+    , notify = require("../lib")
+    , readJson = require("r-json")
+    , deffy = require("deffy")
+    , notifier = require("node-notifier")
+    , moment = require("moment")
+    ;
+
+// Constants
+const CONFIG_PATH = abs("~/.github-config.json");
+
+// Parse the command line arguments
+var intervalOpt = new Clp.Option(["i", "interval"], "The delay between requests (milliseconds).", "ms", 8000)
+  , tokenOpt = new Clp.Option(["t", "token"], "The GitHub token.", "token")
+  , parser = new Clp({
+        name: "GitHub Notify"
+      , version: packageJson.version
+      , exe: packageJson.name
+      , examples: [
+            "github-notify -t 9b0...ab1"
+          , "github-notify -t 9b0...ab1 -i 10000 # every ten seconds"
+        ]
+      , docs_url: packageJson.homapage
+      , process: true
+    })
+  ;
+
+readJson(CONFIG_PATH, (err, conf) => {
+    if (err) {
+        conf = {};
+    }
+    tokenOpt.value = deffy(tokenOpt.value, conf.token, true);
+    intervalOpt.value = parseInt(intervalOpt.value);
+
+    if (isNaN(intervalOpt.value)) {
+        return log("Invalid interval value.", "error");
+    }
+
+    notify(tokenOpt.value, intervalOpt.value, (err, data) => {
+    debugger
+        if (err) {
+            return notifier.notify({
+                title: "Error!"
+              , message: err.message || err.toString()
+            });
+        }
+        notifier.notify({
+            title: data.title[0]._
+          , message: moment(data.published[0]).fromNow()
+          , icon: __dirname + "/../res/gh.png"
+        });
+    });
+});

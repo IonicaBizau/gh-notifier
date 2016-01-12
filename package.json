@@ -1,0 +1,41 @@
+{
+  "name": "github-nottify",
+  "version": "1.0.0",
+  "description": "Receive desktop notifications from your GitHub dashboard.",
+  "main": "lib/index.js",
+  "bin": {
+    "github-notify": "./bin/github-notify"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/IonicaBizau/github-notify.git"
+  },
+  "keywords": [
+    "github",
+    "notifications",
+    "desktop"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/IonicaBizau/github-notify#readme",
+  "dependencies": {
+    "abs": "^1.2.0",
+    "clp": "^3.2.0",
+    "deffy": "^2.2.0",
+    "emoji-logger": "^1.0.0",
+    "gh.js": "^2.4.0",
+    "moment": "^2.11.1",
+    "node-notifier": "^4.4.0",
+    "page-changed": "^1.2.0",
+    "r-json": "^1.2.0",
+    "request": "^2.67.0",
+    "xml2js": "^0.4.15"
+  },
+  "blah": {
+      "h_img": "http://i.imgur.com/OqMXPq5.png",
+      "ex_img": "http://i.imgur.com/ViV1UST.png"
+  }
+}
