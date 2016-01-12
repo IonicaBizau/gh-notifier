@@ -1,24 +1,24 @@
-[![github-nottify](http://i.imgur.com/OqMXPq5.png)](#)
+[![gh-notifier](http://i.imgur.com/OqMXPq5.png)](#)
 
-# `$ github-nottify` [![Support this project][donate-now]][paypal-donations]
+# `$ gh-notifier` [![Support this project][donate-now]][paypal-donations]
 
 Receive desktop notifications from your GitHub dashboard.
 
-[![github-nottify](http://i.imgur.com/ViV1UST.png)](#)
+[![gh-notifier](http://i.imgur.com/ViV1UST.png)](#)
 
 ## Installation
 
 You can install the package globally and use it as command line tool:
 
 ```sh
-$ npm i -g github-nottify
+$ npm i -g gh-notifier
 ```
 
-Then, run `github-nottify --help` and see what the CLI tool can do.
+Then, run `gh-notifier --help` and see what the CLI tool can do.
 
 ```sh
-$ github-notify --help
-Usage: github-nottify [options]
+$ gh-notifier --help
+Usage: gh-notifier [options]
 
 Options:
   -i, --interval <ms>  The delay between requests (milliseconds).
@@ -38,13 +38,13 @@ Examples:
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
-$ npm i --save github-nottify
+$ npm i --save gh-notifier
 ```
 
 ```js
 "use strict";
 
-const notify = require("github-nottify");
+const notify = require("gh-notifier");
 
 // Check every 3 seconds
 notify("b80688e1decdca2cd0ffc8b665e4aa14fc5ba8c4", 3000, (err, data) => {

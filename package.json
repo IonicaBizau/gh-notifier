@@ -1,17 +1,17 @@
 {
-  "name": "github-nottify",
+  "name": "gh-notifier",
   "version": "1.0.0",
   "description": "Receive desktop notifications from your GitHub dashboard.",
   "main": "lib/index.js",
   "bin": {
-    "github-notify": "./bin/github-notify"
+    "gh-notifier": "./bin/gh-notifier"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/IonicaBizau/github-notify.git"
+    "url": "git+ssh://git@bitbucket.org/IonicaBizau/gh-notifier.git"
   },
   "keywords": [
     "github",
@@ -20,7 +20,7 @@
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/IonicaBizau/github-notify#readme",
+  "homepage": "https://bitbucket.org/IonicaBizau/gh-notifier#readme",
   "dependencies": {
     "abs": "^1.2.0",
     "clp": "^3.2.0",
