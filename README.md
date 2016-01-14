@@ -1,8 +1,8 @@
 [![gh-notifier](http://i.imgur.com/OqMXPq5.png)](#)
 
-# `$ gh-notifier` [![Support this project][donate-now]][paypal-donations]
+# `$ gh-notifier` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/gh-notifier.svg)](https://www.npmjs.com/package/gh-notifier) [![Downloads](https://img.shields.io/npm/dt/gh-notifier.svg)](https://www.npmjs.com/package/gh-notifier) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-Receive desktop notifications from your GitHub dashboard.
+> Receive desktop notifications from your GitHub dashboard.
 
 [![gh-notifier](http://i.imgur.com/ViV1UST.png)](#)
 

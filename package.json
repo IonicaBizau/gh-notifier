@@ -1,6 +1,6 @@
 {
   "name": "gh-notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Receive desktop notifications from your GitHub dashboard.",
   "main": "lib/index.js",
   "bin": {
