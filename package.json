@@ -1,6 +1,6 @@
 {
   "name": "gh-notifier",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Receive desktop notifications from your GitHub dashboard.",
   "main": "lib/index.js",
   "bin": {
@@ -38,5 +38,19 @@
   "blah": {
     "h_img": "http://i.imgur.com/OqMXPq5.png",
     "ex_img": "http://i.imgur.com/ViV1UST.png"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ],
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/gh-notifier/issues"
   }
 }
