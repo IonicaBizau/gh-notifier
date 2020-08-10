@@ -1,6 +1,6 @@
 {
   "name": "gh-notifier",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Receive desktop notifications from your GitHub dashboard.",
   "main": "lib/index.js",
   "bin": {
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/IonicaBizau/gh-notifier.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/gh-notifier.git"
   },
   "keywords": [
     "github",
     "notifications",
     "desktop"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/IonicaBizau/gh-notifier#readme",
+  "homepage": "https://github.com/IonicaBizau/gh-notifier#readme",
   "dependencies": {
     "abs": "^1.2.0",
     "clp": "^3.2.0",
@@ -38,5 +38,23 @@
   "blah": {
     "h_img": "http://i.imgur.com/OqMXPq5.png",
     "ex_img": "http://i.imgur.com/ViV1UST.png"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
+  ],
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/gh-notifier/issues"
   }
 }
